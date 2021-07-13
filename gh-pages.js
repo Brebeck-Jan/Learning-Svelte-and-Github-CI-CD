@@ -4,10 +4,10 @@ ghpages.publish(
 	    'public', // path to public directory
 	    {
 		            branch: 'gh-pages',
-		            repo: 'https://github.com/username/yourproject.git', // Update to point to your repository  
+		            repo: 'github.com/Brebeck-Jan/Learning-Svelte-and-Github-CI-CD.git', 
 		            user: {
-				                name: 'Your name', // update to use your name
-				                email: 'Your Email address' // Update to use your email
+				                name: 'Brebeck-Jan', // update to use your name
+				                email: 'Jan.Brebeck98@gmail.com' // Update to use your email
 				            }
 		        },
 	    () => {
