@@ -19,7 +19,12 @@ jobs:
           port: ${{ secrets.PORT }}
           connect_timeout: 10s
           script: |
-            ls
-            echo $WELCOME 
-            mkdir -p /home/github/test/test1 && 
-            whoami
+            killall -9 python3
+            killall -9 node
+            cd scientific-purpose-harvester
+            git pull
+            cd harvester
+            python3 api.py > api_logs.txt & disown
+            cd ../svelete_harvester/
+            HOST=85.214.28.167 npm run dev > svelete_logs.txt & disown
+            echo finished
