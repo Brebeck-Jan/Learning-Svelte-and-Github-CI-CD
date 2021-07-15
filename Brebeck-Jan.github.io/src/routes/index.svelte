@@ -42,6 +42,8 @@
 
 <h1>Great success!</h1>
 
+<h1>Big Change!</h1>
+
 <figure>
 	<img alt="Success Kid" src="{successkid}">
 	<figcaption>Have fun with Sapper!</figcaption>
