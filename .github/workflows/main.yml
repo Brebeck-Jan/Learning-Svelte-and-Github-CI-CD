@@ -24,9 +24,9 @@ jobs:
             cd scientific-purpose-harvester
             git pull
             cd harvester
-            python3 api.py > api_logs.txt & disown
+            python3 api.py & disown
             cd ../svelete_harvester/
             rm -r node_modules/
             npm install
-            HOST=85.214.28.167 npm run dev > svelete_logs.txt & disown
+            HOST=85.214.28.167 npm run dev & disown
             echo finished
