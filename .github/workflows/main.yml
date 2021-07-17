@@ -19,14 +19,19 @@ jobs:
           port: ${{ secrets.PORT }}
           connect_timeout: 10s
           script: |
+            echo "Kill all processes"
             killall -9 python3
             killall -9 node
             cd scientific-purpose-harvester
+            echo "Git pull"
             git pull
             cd harvester
+            echo "start python"
             python3 api.py & disown
             cd ../svelete_harvester/
             rm -r node_modules/
+            echo "npm instal"
             npm install
+            echo "npm run dev"
             HOST=85.214.28.167 npm run dev & disown
             echo finished
