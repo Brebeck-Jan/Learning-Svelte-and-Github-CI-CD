@@ -34,4 +34,4 @@ jobs:
             npm install
             echo "npm run dev"
             HOST=85.214.28.167 npm run dev & disown
-            echo finished
+            echo "finished"
